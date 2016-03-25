@@ -19,6 +19,7 @@ public class PracticalTest01SecondaryActivity extends Activity {
 		
 		@Override
 		public void onClick(View view) {
+			Intent i;
 			switch(view.getId()) {
 				case R.id.ok_button:
 					setResult(RESULT_OK, new Intent());
@@ -29,12 +30,13 @@ public class PracticalTest01SecondaryActivity extends Activity {
 					finish();
 					break;
 				case R.id.queryservice:
-					Intent i = new Intent(view.getContext(), PracticalTest01Service.class);
+					i = new Intent(PracticalTest01SecondaryActivity.this, PracticalTest01Service.class);
 					i.putExtra("querycounter", -1);
 					startService(i);
 					break;
 				case R.id.stopservice:
-					
+					i = new Intent(PracticalTest01SecondaryActivity.this, PracticalTest01Service.class);
+					stopService(i);
 					break;
 			}
 		}

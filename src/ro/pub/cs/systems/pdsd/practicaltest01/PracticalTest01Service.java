@@ -26,7 +26,7 @@ public class PracticalTest01Service extends Service {
 	public int onStartCommand (Intent intent, int a, int b) {
 		Toast.makeText(this, "Service onStartCommand" , Toast.LENGTH_LONG).show();
 		
-		int query = intent.getIntExtra("queryservice", 0);
+		int query = intent.getIntExtra("querycounter", 0);
 		if(query == -1)
 			Toast.makeText(this, "Service queried =" + query, Toast.LENGTH_LONG).show();
 		else{

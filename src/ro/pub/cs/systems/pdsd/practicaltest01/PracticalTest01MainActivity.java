@@ -52,6 +52,7 @@ public class PracticalTest01MainActivity extends Activity {
 					break;
 				case R.id.submittoservice:
 					Intent i = new Intent(PracticalTest01MainActivity.this, PracticalTest01Service.class);
+					
 					i.putExtra("leftcounter", rightButtonClickedNumber);
 					i.putExtra("rightcounter", leftButtonClickedNumber);
 					startService(i);

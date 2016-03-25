@@ -32,7 +32,7 @@
         <service 
             android:enabled="true"
             android:exported="true" 
-            android:name=".service.PracticalTest01Service" 
+            android:name=".PracticalTest01Service" 
             />
     </application>
 
